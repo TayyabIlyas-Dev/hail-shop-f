@@ -344,7 +344,6 @@ import { useThankyouToast } from "./ThankyouToast";
 import { useRouter, useSearchParams } from "next/navigation";
 import Thanks from "./Thanks";
 import { useToast } from "../context/ToastContext";
-import StripeCheckOutButton from "./StripeCheckOutButton";
 import { visa, mastercard, amex, googlePay, applePay } from "@/public";
 import { FaCcMastercard, FaCcVisa, FaStripe } from "react-icons/fa";
 
@@ -716,7 +715,6 @@ const CheckOut: React.FC = () => {
   </button>
 ) : paymentMethod === "card" ? (
   <button onClick={handleCheckoutData} className="w-full">
-<StripeCheckOutButton isDisabled={paymentMethod !== "card"} />
 </button>
 ) : null}
 
