@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+*{ 
+  @apply font-urbanist 
+ }
+
+@media (max-width: 400px) {
+  .custom-style {
+    @apply h-12 w-16 mt-3;
+  }
+}
+@media (max-width: 400px) {
+  .card-image {
+    @apply h-24;
+  }
+}
+
+
+.cl-footer {
+  background-color: #000 !important; /* Black ya koi aur color */
+}
+
+
+.review-name-color :hover{
+color: #000;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px;
+ /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0d6b77e4, #07464ee4); /* Stylish gradient */
+  border-radius: 8px; /* Rounded edges */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #000000, #434343); /* Shiny black gradient */
+  box-shadow: 0 0 10px #000000; /* Adds a glowing shine */
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Light background for contrast */
+  border-radius: 8px; /* Rounded track edges */
+}
+/* review scrolbar */
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.custom-review-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+ /* Width of the scrollbar */
+}
+
+.custom-review-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #121212e4, #151515e4); /* Stylish gradient */
+  border-radius: 8px; /* Rounded edges */
+}
+
+.custom-review-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #000000, #988f8f); /* Shiny black gradient */
+  box-shadow: 0 0 10px #000000; /* Adds a glowing shine */
+}
+
+
+.custom-review-scrollbar::-webkit-scrollbar-track {
+  background: #adaeb0; /* Light background for contrast */
+  border-radius: 8px; /* Rounded track edges */
+}
+/* dashboard */
+
+.custom-scrollbar2::-webkit-scrollbar {
+  width: 2px;
+ /* Width of the scrollbar */
+}
+
+.custom-scrollbar2::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #9f9f9fe4, #d9d9d9e4); /* Stylish gradient */
+  border-radius: 12px; /* Rounded edges */
+}
+
+.custom-scrollbar2::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #000000, #434343); /* Shiny black gradient */
+  box-shadow: 0 0 10px #000000; /* Adds a glowing shine */
+}
+
+
+.custom-scrollbar2::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Light background for contrast */
+  border-radius: 8px ;
+  margin-top: 9px; 
+  margin-bottom: 9px;/* Rounded track edges */
+}
+
+.container{
+  @apply md:max-w-[1024px] max-w-[600px] px-4 md:px-0 m-auto
+}
+.logo{
+  @apply font-urbanist font-black text-2xl
+}
+.navLink{
+  @apply font-urbanist font-semibold text-2xl p-2
+}
+.cart-icon{
+  @apply relative text-[25px] 
+}
+.fav-icon{
+  @apply relative text-[30px] 
+}
+.cart-item-qty{
+  @apply absolute text-[12px] top-0 right-[-5px] bg-red-500 w-[18px] h-[18px] rounded-3xl text-center text-white font-urbanist  font-semibold
+}
+.fav-item-qty{
+  @apply absolute text-[12px] top-0 right-[-5px] bg-red-500 w-[18px] h-[18px] rounded-3xl text-center text-white font-urbanist  font-semibold
+}
+.hero-section{
+  @apply w-full md:h-[450px] h-[200px] flex items-center
+}
+.hero-contianer{
+  @apply h-full md:max-w-[1024px] max-w-[600px] m-auto flex justify-center items-center relative px-4 md:px-0
+}
+.hero-airpods{
+  @apply absolute md:mt-[300px] mt-[150px]
+}
+
+/* NEW PRODUCT DETAILS STARTS */
+.product-details-section{
+  @apply w-full md:pt-16;
+}
+
+.product-details-container{
+  @apply gap-10 md:max-w-[1024px] m-auto max-w-[600px] px-4 md:px-0  grid md:grid-cols-2 grid-cols-1 ;
+}
+
+.small-images-container{
+  @apply flex gap-[5px] justify-center;
+}
+
+.quantity-desc{
+  @apply p-[6px] flex border border-black ;
+}
+
+.quantity-desc span{
+  @apply text-[16px] cursor-pointer;
+  padding: 6px 12px;
+}
+
+.quantity-desc .num{
+  @apply text-[20px];
+}
+
+.quantity-desc .plus{
+ color: rgb(49, 168, 49);
+}
+
+.quantity-desc .minus{
+  color: red;
+}
+
+.btn{
+  @apply  text-black md:w-1/2 p-5 text-xl font-bold w-full  border-4 border-black;
+}
+
+
+.add-to-cart{
+  @apply  text-black md:w-1/2 p-2 text-lg font-semibold w-full  border-2 hover:text-white hover:bg-black border-black;
+}
+
+/* NEW PRODUCT DETAILS ENDS */
+
+/* CART STARTS */
+
+.cart-wrapper{
+  @apply w-[100%] bg-black bg-opacity-50  fixed right-0 top-0 z-10;
+}
+
+.cart-container{
+  @apply border h-[100vh]  w-[600px] bg-white pt-32 float-right px-[40px] py-[50px] relative;
+}
+
+.cart-heading{
+  @apply  flex items-center text-[18px] font-[500] cursor-pointer gap-[2px] ml-[10px] border-none bg-[transparent];
+}
+
+.cart-heading .heading{
+  margin-left: 10px;
+}
+
+.cart-num-items{
+  margin-left: 10px;
+  color: #f02d34;
+}
+
+.product-container{
+  @apply mt-[15px] overflow-auto max-h-[70vh] px-[20px] py-[10px];
+}
+
+.empty-cart{
+  margin:40px;
+  text-align:center;
+}
+
+.empty-cart h3{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* .btn{
+  width: 100%;
+   max-width: 400px;
+   padding: 10px 12px;
+   border-radius: 15px;
+   border: none;
+   font-size: 20px;
+   margin-top: 10px;
+   margin-top: 40px;
+   text-transform: uppercase;
+   background-color: #f02d34;
+   color: #fff;
+   cursor: pointer;
+   transform: scale(1, 1);
+   transition: transform 0.5s ease;
+ }  */
+ 
+ .btn:hover{
+   transform: scale(1.1,1.1);
+ }
+
+.product{ 
+  @apply flex gap-[15px] p-[20px];
+}
+
+.product .cart-product-image{
+  @apply  w-[180px] h-[150px] rounded-[15px] bg-[#ebebeb];
+}
+
+.item-desc .flex{
+  display: flex;
+  justify-content: space-between;
+  color: #324d67;
+}
+
+.item-desc .bottom{
+  margin-top: 60px;
+}
+
+.top{
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex h5{
+  font-size: 24px;
+}
+
+.flex h4{
+  font-size: 20px;
+}
+
+.quantity-desc{
+  padding: 6px;
+  display:flex;
+  border:1px solid black;
+  align-items: center;
+}
+.quantity-desc span{
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.quantity-desc .num{
+   font-size: 20px;
+}
+
+.quantity-desc .plus{
+  color: rgb(49, 168, 49);
+}
+
+.remove-item{
+  font-size: 24px;
+  color: #f02d34;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.cart-bottom{
+  position: absolute;
+  bottom: 12px;
+  right: 5px;
+  width: 100%;
+  padding: 30px 65px;
+}
+.total {
+  @apply flex w-full justify-between py-3;
+}
+
+.total h3{
+  font-size: 22px;
+}
+
+.btn-container{
+  margin: auto;
+} 
+
+.checkout-btn{
+  @apply  text-black p-5 text-xl font-bold w-full mt-5 border-4 border-black;
+}
+
+.checkout-btn:hover{
+  @apply  text-white p-5 text-xl font-bold w-full bg-black  ;
+}
+
+/* CART ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 10 10% 10%;
+    --chart-2: 217.9 10.6% 64.9%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-5: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-2: 340 75% 55%;
+    }
+}
+
